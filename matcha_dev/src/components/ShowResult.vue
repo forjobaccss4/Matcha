@@ -172,20 +172,30 @@
                                                         <md-tab md-label="About me">
                                                             <p class="about-me">
                                                                 Biography: {{ item.biography }}
-                                                                <p class="about-me-p">I`m {{ item.birthday }} years old and my login is {{ item.login }}. I`m from {{ item.city }}.</p>
-                                                                <p class="about-me-p">You can find me by interests: <span v-if="item.interests" v-for="items in item.interests">{{ items }} </span></p>
-                                                                <p class="about-me-p" v-if="item.children == 0">I have no children.</p>
-                                                                <p class="about-me-p" v-else>I have children.</p>
-                                                                <p class="about-me-p" v-if="item.education == 0">I have no education.</p>
-                                                                <p class="about-me-p" v-else>I have higher education.</p>
-                                                                <p class="about-me-p">My height is {{ item.height }}.</p>
-                                                                <p class="about-me-p"> My rating is {{ item.rating }}.</p>
-                                                                <p class="about-me-p">Distance to you: {{ item.distance }} km</p>
+                                                            <p class="about-me-p">I`m {{ item.birthday
+                                                                }} years old and my login is {{ item.login
+                                                                }}. I`m from {{ item.city }}.</p>
+                                                            <p class="about-me-p">You can find me by interests: <span
+                                                                    v-if="item.interests"
+                                                                    v-for="items in item.interests">{{ items }} </span>
+                                                            </p>
+                                                            <p class="about-me-p" v-if="item.children == 0">
+                                                                I have no children.</p>
+                                                            <p class="about-me-p" v-else>I have children.</p>
+                                                            <p class="about-me-p" v-if="item.education == 0">
+                                                                I have no education.</p>
+                                                            <p class="about-me-p" v-else>I have higher education.</p>
+                                                            <p class="about-me-p">My height is {{ item.height }}.</p>
+                                                            <p class="about-me-p"> My rating is {{ item.rating }}.</p>
+                                                            <p class="about-me-p">Distance to you: {{ item.distance
+                                                                }} km</p>
                                                             </p>
                                                         </md-tab>
                                                         <md-tab md-label="Photos" style="margin-top: 40px;">
-                                                            <md-content style="width:100%; height: 200px;display:flex; justify-content:center;">
-                                                                <div v-if="item.photos.length" v-html="item.photos"></div>
+                                                            <md-content
+                                                                    style="width:100%; height: 200px;display:flex; justify-content:center;">
+                                                                <div v-if="item.photos.length"
+                                                                     v-html="item.photos"></div>
                                                             </md-content>
                                                         </md-tab>
 
@@ -196,8 +206,8 @@
                                                             Close
                                                         </md-button>
                                                         <md-button class="md-primary" style="margin-top: 10px"
-                                                        v-if="item.fake"
-                                                        v-on:click="fakeAccount(item)">
+                                                                   v-if="item.fake"
+                                                                   v-on:click="fakeAccount(item)">
                                                             Fake account
                                                         </md-button>
                                                         <md-button :disabled="item.block" id="block_user"
@@ -270,20 +280,31 @@
                                                         <md-tab md-label="About me">
                                                             <p class="about-me">
                                                                 Biography: {{ item.biography }}
-                                                                <p class="about-me-p" style="line-height: 0.9;"> I`m {{ item.birthday }} years old and my login is {{ item.login }}. I`m from {{ item.city }}.</p>
-                                                                <p class="about-me-p">You can find me by interests: <span v-if="item.interests" v-for="items in item.interests">{{ items }} </span></p>
-                                                                <p class="about-me-p"  v-if="item.children == 0">I have no children.</p>
-                                                                <p class="about-me-p"  v-else>I have children.</p>
-                                                                <p class="about-me-p"  v-if="item.education == 0">I have no education.</p>
-                                                                <p class="about-me-p"  v-else>I have higher education.</p>
-                                                                <p class="about-me-p">My height is {{ item.height }}.</p>
-                                                                <p class="about-me-p">My rating is {{ item.rating }}.</p>
-                                                                <p class="about-me-p">Distance to you: {{ item.distance }} km</p>
+                                                            <p class="about-me-p" style="line-height: 0.9;">
+                                                                I`m {{ item.birthday
+                                                                }} years old and my login is {{ item.login
+                                                                }}. I`m from {{ item.city }}.</p>
+                                                            <p class="about-me-p">You can find me by interests: <span
+                                                                    v-if="item.interests"
+                                                                    v-for="items in item.interests">{{ items }} </span>
+                                                            </p>
+                                                            <p class="about-me-p" v-if="item.children == 0">
+                                                                I have no children.</p>
+                                                            <p class="about-me-p" v-else>I have children.</p>
+                                                            <p class="about-me-p" v-if="item.education == 0">
+                                                                I have no education.</p>
+                                                            <p class="about-me-p" v-else>I have higher education.</p>
+                                                            <p class="about-me-p">My height is {{ item.height }}.</p>
+                                                            <p class="about-me-p">My rating is {{ item.rating }}.</p>
+                                                            <p class="about-me-p">Distance to you: {{ item.distance
+                                                                }} km</p>
                                                             </p>
                                                         </md-tab>
                                                         <md-tab md-label="Photos" style="margin-top: 40px;">
-                                                            <md-content style="height: 200px;display:flex; justify-content:center;">
-                                                                <div v-if="item.photos.length" v-html="item.photos"></div>
+                                                            <md-content
+                                                                    style="height: 200px;display:flex; justify-content:center;">
+                                                                <div v-if="item.photos.length"
+                                                                     v-html="item.photos"></div>
                                                             </md-content>
                                                         </md-tab>
 
@@ -294,8 +315,8 @@
                                                             Close
                                                         </md-button>
                                                         <md-button class="md-primary" style="margin-top: 10px"
-                                                        v-if="item.fake"
-                                                        v-on:click="fakeAccount(item)">
+                                                                   v-if="item.fake"
+                                                                   v-on:click="fakeAccount(item)">
                                                             Fake account
                                                         </md-button>
                                                         <md-button :disabled="item.block" id="block_user"
@@ -549,7 +570,7 @@
                     login: account.login
                 }).then((response) => {
 
-                }).catch(function(error) {
+                }).catch(function (error) {
                     console.log(error)
                 })
             },
@@ -662,116 +683,104 @@
             sortByChoosen(sortParam) {
                 if (this.seen) {
                     if (this.userCards) {
-                        if (!this.tags) {
+                        if (sortParam === 'tags') {
+                            if (!this.tags) {
                                 this.tags = !this.tags;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.tags > b.tags
-                                })
+                                this.userCards.sort(function(a,b) {return (a.tags < b.tags) ? 1 : ((b.tags < a.tags) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.tags = !this.tags;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.tags < b.tags
-                                })
+                                this.userCards.sort(function(a,b) {return (a.tags > b.tags) ? 1 : ((b.tags > a.tags) ? -1 : 0);} );
+                                return this.userCards
                             }
-                        if (sortParam === 'distance') {
+                        }
+                        else if (sortParam === 'distance') {
                             if (!this.distance) {
                                 this.distance = !this.distance;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.distance > b.distance
-                                })
+                                this.userCards.sort(function(a,b) {return (a.distance > b.distance) ? 1 : ((b.distance > a.distance) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.distance = !this.distance;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.distance < b.distance
-                                })
+                                this.userCards.sort(function(a,b) {return (a.distance < b.distance) ? 1 : ((b.distance < a.distance) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                         else if (sortParam === 'age') {
                             if (!this.age) {
                                 this.age = !this.age;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.birthday) > Number(b.birthday)
-                                })
+                                this.userCards.sort(function(a,b) {return (a.birthday > b.birthday) ? 1 : ((b.birthday > a.birthday) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.age = !this.age;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.birthday) < Number(b.birthday)
-                                });
+                                this.userCards.sort(function(a,b) {return (a.birthday < b.birthday) ? 1 : ((b.birthday < a.birthday) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                         else if (sortParam === 'rating') {
                             if (!this.rating) {
                                 this.rating = !this.rating;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.rating) > Number(b.rating)
-                                })
+                                this.userCards.sort(function(a,b) {return (Number(a.rating) > Number(b.rating)) ? 1 : ((Number(b.rating) > Number(a.rating)) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.rating = !this.rating;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.rating) < Number(b.rating)
-                                })
+                                this.userCards.sort(function(a,b) {return (Number(a.rating) < Number(b.rating)) ? 1 : ((Number(b.rating) < Number(a.rating)) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                     }
                 }
                 else {
                     if (this.filterCards) {
-                        if (!this.tags) {
+                        if (sortParam === 'tags') {
+                            if (!this.tags) {
                                 this.tags = !this.tags;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.tags > b.tags
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.tags < b.tags) ? 1 : ((b.tags < a.tags) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.tags = !this.tags;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.tags < b.tags
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.tags > b.tags) ? 1 : ((b.tags > a.tags) ? -1 : 0);} );
+                                return this.filterCards
                             }
-                        if (sortParam === 'distance') {
+                        }
+                        else if (sortParam === 'distance') {
                             if (!this.distance) {
                                 this.distance = !this.distance;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.distance > b.distance
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.distance > b.distance) ? 1 : ((b.distance > a.distance) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.distance = !this.distance;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.distance < b.distance
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.distance < b.distance) ? 1 : ((b.distance < a.distance) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                         else if (sortParam === 'age') {
                             if (!this.age) {
                                 this.age = !this.age;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.birthday) > Number(b.birthday)
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.birthday > b.birthday) ? 1 : ((b.birthday > a.birthday) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.age = !this.age;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.birthday) < Number(b.birthday)
-                                });
+                                this.filterCards.sort(function(a,b) {return (a.birthday < b.birthday) ? 1 : ((b.birthday < a.birthday) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                         else if (sortParam === 'rating') {
                             if (!this.rating) {
                                 this.rating = !this.rating;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.rating) > Number(b.rating)
-                                })
+                                this.filterCards.sort(function(a,b) {return (Number(a.rating) > Number(b.rating)) ? 1 : ((Number(b.rating) > Number(a.rating)) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.rating = !this.rating;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.rating) < Number(b.rating)
-                                })
+                                this.filterCards.sort(function(a,b) {return (Number(a.rating) < Number(b.rating)) ? 1 : ((Number(b.rating) < Number(a.rating)) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                     }
@@ -805,15 +814,15 @@
                         this.filterResult = true;
                     }
                     this.filterCards = response.data;
-                    this.filterCards.forEach(function(item, i, arr) {
-                    if (item['photos'].length) {
-                        let tmpResult = '';
-                        for (var i = 0; i < item['photos'][0].length; i++) {
-                            tmpResult = tmpResult + '<img src="' + 'http://10.111.4.5:8080' + item['photos'][0][i] + '" style="width:100px; height: 100px;">';
+                    this.filterCards.forEach(function (item, i, arr) {
+                        if (item['photos'].length) {
+                            let tmpResult = '';
+                            for (var i = 0; i < item['photos'][0].length; i++) {
+                                tmpResult = tmpResult + '<img src="' + 'http://10.111.4.5:8080' + item['photos'][0][i] + '" style="width:100px; height: 100px;">';
+                            }
+                            item['photos'] = tmpResult;
                         }
-                        item['photos'] = tmpResult;
-                    }
-                })
+                    })
                 }).catch(function (error) {
                     console.log(error);
                 })
@@ -1038,7 +1047,7 @@
                     return;
                 }
                 this.userCards = response.data;
-                this.userCards.forEach(function(item, i, arr) {
+                this.userCards.forEach(function (item, i, arr) {
                     if (item['photos'].length) {
                         let tmpResult = '';
                         for (var i = 0; i < item['photos'][0].length; i++) {
@@ -1078,15 +1087,16 @@
 </script>
 
 <style>
-    
+
     .about-me {
-        line-height: 1; 
+        line-height: 1;
         margin-top: 30px;
     }
 
     .about-me-p {
         line-height: 0.9;
     }
+
     .md-menu {
         margin-right: -15px;
     }

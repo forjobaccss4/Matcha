@@ -165,6 +165,7 @@
             changeSeen() {
                 this.seen = !this.seen
                 this.registration = !this.registration
+                this.recovery = false
             },
             checkLoginAJAX() {
                 axios.post('http://10.111.4.5:8080/registration/checkLoginAJAX', {
@@ -358,8 +359,9 @@
         ,
         created() {
             bus.$on("changeSeen", (data) => {
-                this.seen = data,
-                    this.registration = false;
+                this.seen = data;
+                this.recovery = false;
+                this.registration = false;
                 if (this.registration === false) {
                     this.signinEmail = '',
                         this.signinPassword = '',

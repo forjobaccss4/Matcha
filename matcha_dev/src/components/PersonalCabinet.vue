@@ -75,16 +75,16 @@
               <div class="col_half">
                   <md-field>
                     <label>First name</label>
-                    <md-input v-on:blur="postFirstName" v-model="first_name"></md-input>
+                    <md-input v-on:blur="postFirstName" maxlength="255" v-model="first_name"></md-input>
                   </md-field>
-                <p id="check-firstName">{{ firstNameAJAX }}</p>
+                <p id="check-firstName" v-html="firstNameAJAX"></p>
               </div>
               <div class="col_half">
                   <md-field>
                     <label>Last name</label>
-                    <md-input v-on:blur="postLastName" v-model="last_name"></md-input>
+                    <md-input v-on:blur="postLastName" maxlength="255" v-model="last_name"></md-input>
                   </md-field>
-                <p id="check-lastName">{{ lastNameAJAX }}</p>
+                <p id="check-lastName" v-html="lastNameAJAX"></p>
               </div>
               <div class="col_half">
                   <md-field>
@@ -354,8 +354,8 @@ export default {
         firstName: this.first_name
       })
         .then(response => {
+          $('#check-firstName').css('color', 'red')
           this.firstNameAJAX = response.data
-          console.log(this.answer)
         })
         .catch(errors => {
           console.log(errors)
@@ -366,8 +366,8 @@ export default {
         secondName: this.last_name
       })
         .then(response => {
+          $('#check-lastName').css('color', 'red')
           this.lastNameAJAX = response.data
-          console.log(this.answer)
         })
         .catch(errors => {
           console.log(errors)
@@ -460,8 +460,6 @@ export default {
       })
         .then(response => {
           if (response.data === true) {
-            $('#border-password').css('borderColor', 'green')
-            $('#border-password-too').css('borderColor', 'green')
             this.passwordAJAX = ''
             this.disabledPasswords = true
             if (this.disabledLogin === true && this.disabledEmail === true && this.disabledPasswords === true) {
@@ -470,30 +468,26 @@ export default {
           }
           else if (response.data === 2) {
             this.passwordAJAX = 'Min: 8 symbols, one lowercase, one uppercase!'
-            $('#border-password').css('borderColor', 'red')
-            $('#border-password-too').css('borderColor', 'red')
             $('#check-password').css('color', 'red')
+            $('#check-password_rep').css('color', 'red')
             this.disabledPasswords = false
           }
           else if (response.data === 'emptyP') {
-            this.passwordAJAX = 'Don`t forget enter the password!'
-            $('#border-password').css('borderColor', 'red')
-            $('#border-password-too').css('borderColor', 'red')
+            this.passwordAJAX = 'Passwords do not match!'
             $('#check-password').css('color', 'red')
+            $('#check-password_rep').css('color', 'red')
             this.disabledPasswords = false
           }
           else if (response.data === 'emptyR') {
-            this.passwordAJAX = ''
-            $('#border-password').css('borderColor', 'red')
-            $('#border-password-too').css('borderColor', 'red')
+            this.passwordAJAX = 'Passwords do not match!'
             $('#check-password').css('color', 'red')
+            $('#check-password_rep').css('color', 'red')
             this.disabledPasswords = false
           }
           else if (response.data === 1) {
             this.passwordAJAX = 'Passwords do not match!'
-            $('#border-password').css('borderColor', 'red')
-            $('#border-password-too').css('borderColor', 'red')
             $('#check-password').css('color', 'red')
+            $('#check-password_rep').css('color', 'red')
             this.disabledPasswords = false
           }
         })
@@ -502,6 +496,10 @@ export default {
         })
     },
     sendAllInputAJAX () {
+        if(this.firstNameAJAX !== '' || this.lastNameAJAX !== '' || this.passwordAJAX !== '' ||
+            (this.loginAJAX !== '' && this.loginAJAX !== 'Ok, login is available') || (this.mailAJAX !== '' && this.mailAJAX !== 'Ok, email is available!')) {
+            return;
+        }
       this.hash(this.hobby);
       var photoSrcAvatar = document.getElementById('photo_avatar').src
       var photoAdd1 = document.getElementById('add_photo_1').src
@@ -563,6 +561,10 @@ export default {
       })
         .then(response => {
             localStorage.setItem('userName', response.data)
+            this.$toast.success({
+                title: 'Updated',
+                message: 'Changes saved!'
+            });
         })
         .catch(errors => {
           console.log(errors)
@@ -630,6 +632,16 @@ export default {
           } else {
             photoAdd5.src = this.answer_all_input.photo_user_5
           }
+            if (document.getElementById('add_photo_1').src !== 'http://10.111.4.5:8080/public/web_images/add_@.png')
+              this.view_delete_1 = !this.view_delete_1
+            if (document.getElementById('add_photo_2').src !== 'http://10.111.4.5:8080/public/web_images/add_@.png')
+              this.view_delete_2 = !this.view_delete_2
+            if (document.getElementById('add_photo_3').src !== 'http://10.111.4.5:8080/public/web_images/add_@.png')
+              this.view_delete_3 = !this.view_delete_3
+            if (document.getElementById('add_photo_4').src !== 'http://10.111.4.5:8080/public/web_images/add_@.png')
+              this.view_delete_4 = !this.view_delete_4
+            if (document.getElementById('add_photo_5').src !== 'http://10.111.4.5:8080/public/web_images/add_@.png')
+                this.view_delete_5 = !this.view_delete_5
           this.first_name = this.answer_all_input.first_name
           this.last_name = this.answer_all_input.last_name
           this.login = this.answer_all_input.login

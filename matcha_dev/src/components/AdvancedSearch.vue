@@ -447,92 +447,104 @@
             sortByChoosen(sortParam) {
                 if (this.seen) {
                     if (this.userCards) {
-                        if (sortParam === 'distance') {
+                        if (sortParam === 'tags') {
+                            if (!this.tags) {
+                                this.tags = !this.tags;
+                                this.userCards.sort(function(a,b) {return (a.tags < b.tags) ? 1 : ((b.tags < a.tags) ? -1 : 0);} );
+                                return this.userCards
+                            }
+                            else {
+                                this.tags = !this.tags;
+                                this.userCards.sort(function(a,b) {return (a.tags > b.tags) ? 1 : ((b.tags > a.tags) ? -1 : 0);} );
+                                return this.userCards
+                            }
+                        }
+                        else if (sortParam === 'distance') {
                             if (!this.distance) {
                                 this.distance = !this.distance;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.distance > b.distance
-                                })
+                                this.userCards.sort(function(a,b) {return (a.distance > b.distance) ? 1 : ((b.distance > a.distance) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.distance = !this.distance;
-                                return this.userCards.sort(function (a, b) {
-                                    return a.distance < b.distance
-                                })
+                                this.userCards.sort(function(a,b) {return (a.distance < b.distance) ? 1 : ((b.distance < a.distance) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                         else if (sortParam === 'age') {
                             if (!this.age) {
                                 this.age = !this.age;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.birthday) > Number(b.birthday)
-                                })
+                                this.userCards.sort(function(a,b) {return (a.birthday > b.birthday) ? 1 : ((b.birthday > a.birthday) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.age = !this.age;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.birthday) < Number(b.birthday)
-                                });
+                                this.userCards.sort(function(a,b) {return (a.birthday < b.birthday) ? 1 : ((b.birthday < a.birthday) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                         else if (sortParam === 'rating') {
                             if (!this.rating) {
                                 this.rating = !this.rating;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.rating) > Number(b.rating)
-                                })
+                                this.userCards.sort(function(a,b) {return (Number(a.rating) > Number(b.rating)) ? 1 : ((Number(b.rating) > Number(a.rating)) ? -1 : 0);} );
+                                return this.userCards
                             }
                             else {
                                 this.rating = !this.rating;
-                                return this.userCards.sort(function (a, b) {
-                                    return Number(a.rating) < Number(b.rating)
-                                })
+                                this.userCards.sort(function(a,b) {return (Number(a.rating) < Number(b.rating)) ? 1 : ((Number(b.rating) < Number(a.rating)) ? -1 : 0);} );
+                                return this.userCards
                             }
                         }
                     }
                 }
                 else {
                     if (this.filterCards) {
-                        if (sortParam === 'distance') {
+                        if (sortParam === 'tags') {
+                            if (!this.tags) {
+                                this.tags = !this.tags;
+                                this.filterCards.sort(function(a,b) {return (a.tags < b.tags) ? 1 : ((b.tags < a.tags) ? -1 : 0);} );
+                                return this.filterCards
+                            }
+                            else {
+                                this.tags = !this.tags;
+                                this.filterCards.sort(function(a,b) {return (a.tags > b.tags) ? 1 : ((b.tags > a.tags) ? -1 : 0);} );
+                                return this.filterCards
+                            }
+                        }
+                        else if (sortParam === 'distance') {
                             if (!this.distance) {
                                 this.distance = !this.distance;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.distance > b.distance
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.distance > b.distance) ? 1 : ((b.distance > a.distance) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.distance = !this.distance;
-                                return this.filterCards.sort(function (a, b) {
-                                    return a.distance < b.distance
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.distance < b.distance) ? 1 : ((b.distance < a.distance) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                         else if (sortParam === 'age') {
                             if (!this.age) {
                                 this.age = !this.age;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.birthday) > Number(b.birthday)
-                                })
+                                this.filterCards.sort(function(a,b) {return (a.birthday > b.birthday) ? 1 : ((b.birthday > a.birthday) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.age = !this.age;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.birthday) < Number(b.birthday)
-                                });
+                                this.filterCards.sort(function(a,b) {return (a.birthday < b.birthday) ? 1 : ((b.birthday < a.birthday) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                         else if (sortParam === 'rating') {
                             if (!this.rating) {
                                 this.rating = !this.rating;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.rating) > Number(b.rating)
-                                })
+                                this.filterCards.sort(function(a,b) {return (Number(a.rating) > Number(b.rating)) ? 1 : ((Number(b.rating) > Number(a.rating)) ? -1 : 0);} );
+                                return this.filterCards
                             }
                             else {
                                 this.rating = !this.rating;
-                                return this.filterCards.sort(function (a, b) {
-                                    return Number(a.rating) < Number(b.rating)
-                                })
+                                this.filterCards.sort(function(a,b) {return (Number(a.rating) < Number(b.rating)) ? 1 : ((Number(b.rating) < Number(a.rating)) ? -1 : 0);} );
+                                return this.filterCards
                             }
                         }
                     }

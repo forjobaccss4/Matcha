@@ -8,7 +8,6 @@
         </FillProfile>
         <Result v-if="resultView">
             <MainHeader/>
-            <!--<AdvancedSearch/>-->
         </Result>
     </div>
 </template>
