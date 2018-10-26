@@ -14,7 +14,7 @@ e-mail with an unique link will be sent to the registered user to verify his acc
 <li>I propose only “interesting” profiles for example, only men for a heterosexual
 girls. I manage bisexuality. If the orientation isn’t specified, the user will
 be considered bi-sexual.</li>
-<ul> Profiles are cleverly matched:
+<ul><b>Profiles are cleverly matched:</b>
 <li> Same geographic area as the user.</li>
 <li> With a maximum of common tags.</li>
 <li> With a maximum “fame rating”.</li>
