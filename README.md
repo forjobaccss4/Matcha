@@ -1,5 +1,14 @@
 <b><h2>Web Matcha project</h2></b>
 
+Authorized languages:<br>
+◦ [<b>Server</b>] PHP<br>
+◦ [<b>Client</b>]  HTML - CSS - JavaScript<br><br>
+
+Authorized frameworks:<br>
+◦ [<b>Server</b>] None<br>
+◦ [<b>Client</b>] Vue.js<br>
+
+
 <b>Web App with the following features:</b><br>
 <ul><b>Registration and Signing-in:</b><br>
 <li>The app allow a user to register asking at least an email address, a username, a last
