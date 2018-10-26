@@ -1,4 +1,4 @@
-<b>Web Matcha project</b>
+<b><h2>Web Matcha project</h2></b>
 
 <b>Web App with the following features:</b><br>
 <ul><b>Registration and Signing-in:</b><br>
