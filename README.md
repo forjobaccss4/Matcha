@@ -14,11 +14,12 @@ e-mail with an unique link will be sent to the registered user to verify his acc
 <li>I propose only “interesting” profiles for example, only men for a heterosexual
 girls. I manage bisexuality. If the orientation isn’t specified, the user will
 be considered bi-sexual.</li>
-• You must cleverly match3 profiles:
-◦ Same geographic area as the user.
-◦ With a maximum of common tags.
-◦ With a maximum “fame rating”.
-• You must show in priority people from the same geographical area.
-• The list must be sortable by age, localization, “fame rating” and common tags.
-• The list must be filterable by age, localization, “fame rating” and common tags.
+<ul> Profiles are cleverly matched:
+<li> Same geographic area as the user.</li>
+<li> With a maximum of common tags.</li>
+<li> With a maximum “fame rating”.</li>
+<li> You must show in priority people from the same geographical area.</li>
+<li> The list must be sortable by age, localization, “fame rating” and common tags.</li>
+<li> The list must be filterable by age, localization, “fame rating” and common tags.</li>
+  </ul>
 </ul>
