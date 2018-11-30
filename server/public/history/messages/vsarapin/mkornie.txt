@@ -1,1 +1,0 @@
-<div class='message bubble-left'><label class='message-user'>mkornie</label><p>hello</p></div><div class='message bubble-left'><label class='message-user'>mkornie</label><p>how are you</p></div>
