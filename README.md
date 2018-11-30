@@ -19,6 +19,9 @@ e-mail with an unique link will be sent to the registered user to verify his acc
 <li>He/She is able to receive an email allowing him/her to re-initialize his/her password.</li>
 </ul>
 
+### Browsing/Research/Sort
+![Browsing](/gif/main.gif)
+
 <ul><b>Browsing:</b><br>
 <li>I propose only “interesting” profiles for example, only men for a heterosexual
 girls. I manage bisexuality. If the orientation isn’t specified, the user will
@@ -41,6 +44,9 @@ as:
 <li> One or multiple interests tags.</li>
 </ul>
 
+### Cabinet
+![Cabinet](/gif/cab.gif)
+
 <ul><b>Profile of other users</b><br>
 The user also is able to:
 <li> If he has at least one picture “like” another user. When two people “like” each other,
@@ -58,6 +64,9 @@ must be able to “unlike” or be disconnected from that profile.</li>
 When two users are connected, they are able to “chat” in real time(<b>WebSocket.io</b>).
   </ul>
   
+  ### Chat
+![Chat](/gif/chat.gif)
+
 <ul><b>Notifications:</b><br>
 A user will be notified in real time of the following events:
 <li> The user received a “like”.</li>
